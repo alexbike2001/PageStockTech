@@ -3,34 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Sencilla</title>
+    <title>Página de Inicio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f8ff;
             margin: 0;
-            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: #ffffff;
         }
-        h1 {
-            color: #0078d7;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
         }
-        button {
-            background-color: #0078d7;
-            color: white;
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin-top: 32px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .input-container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .input-container label {
+            font-weight: bold;
+            color: #dddddd;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            border-radius: 4px;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .register {
+            text-align: center;
+            color: #1E88E5;
+            margin-top: 16px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #005a9e;
+
+        .button {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px;
+            margin: 24px 0;
+            background: #1E88E5;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            filter: brightness(0) invert(1);
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>¡Bienvenido a Mi Página!</h1>
-    <p>Esta es una página HTML sencilla creada como ejemplo.</p>
-    <button onclick="alert('¡Gracias por hacer clic!')">Haz clic aquí</button>
+    <div class="container">
+        <!-- Logo -->
+        <img src="logo_stocktech_transparente.png" alt="Logo de la aplicación" class="logo">
+
+        <!-- Título -->
+        <div class="title">Sign In</div>
+
+        <!-- Contenedor de entrada -->
+        <div class="input-container">
+            <!-- Email -->
+            <label for="email">E-MAIL</label>
+            <input type="email" id="email" placeholder="Introduce tu correo">
+
+            <!-- Contraseña -->
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" placeholder="Introduce tu contraseña">
+
+            <!-- Registro -->
+            <div class="register">¿No tienes una cuenta? Regístrate</div>
+        </div>
+
+        <!-- Botón de inicio de sesión -->
+        <button class="button">Iniciar Sesión</button>
+
+        <!-- Redes sociales -->
+        <div class="social-icons">
+            <img src="logo_insta.png" alt="Instagram">
+            <img src="logo_facebook.png" alt="Facebook">
+            <img src="logo_twitter.png" alt="Twitter">
+            <img src="logo_youtube.png" alt="YouTube">
+        </div>
+    </div>
 </body>
 </html>
